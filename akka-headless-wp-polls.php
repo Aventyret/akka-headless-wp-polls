@@ -21,10 +21,11 @@ define('AKKA_HEADLESS_WP_POLLS',  __FILE__ );
 define('AKKA_HEADLESS_WP_POLLS_DIR', plugin_dir_path( __FILE__ ));
 define('AKKA_HEADLESS_WP_POLLS_VER', "0.0.1");
 
-require_once(AKKA_HEADLESS_WP_DIR . 'includes/ahw-polls.php');
-require_once(AKKA_HEADLESS_WP_DIR . 'includes/ahw-polls-cpt.php');
-require_once(AKKA_HEADLESS_WP_DIR . 'includes/ahw-polls-acf-fields.php');
-require_once(AKKA_HEADLESS_WP_DIR . 'public/ahw-polls-api-endpoints.php');
+require_once(AKKA_HEADLESS_WP_POLLS_DIR . 'includes/ahw-polls.php');
+require_once(AKKA_HEADLESS_WP_POLLS_DIR . 'includes/ahw-polls-cpt.php');
+require_once(AKKA_HEADLESS_WP_POLLS_DIR . 'includes/ahw-polls-db.php');
+require_once(AKKA_HEADLESS_WP_POLLS_DIR . 'includes/ahw-polls-acf-fields.php');
+require_once(AKKA_HEADLESS_WP_POLLS_DIR . 'public/ahw-polls-api-endpoints.php');
 
 if (is_admin())
 {

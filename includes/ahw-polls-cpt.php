@@ -1,17 +1,16 @@
 <?php
 
 add_action("init", function () {
-    register_post_type("app", [
+    register_post_type("poll", [
         "label" => esc_html__("Polls", "sage"),
         "has_archive" => false,
-        "public" => true,
+        "public" => false,
         "show_ui" => true,
         "show_in_nav_menus" => true,
-        "menu_icon" => "dashicons-comment",
+        "menu_icon" => "dashicons-chart-bar",
         "hierarchical" => false,
         "supports" => [
             "title",
-            "author",
             "revisions",
         ],
         "show_in_rest" => true,

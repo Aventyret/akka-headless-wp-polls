@@ -3,7 +3,7 @@ class Akka_headless_wp_polls_db {
   public static function setup_answers_table() {
     global $wpdb;
 
-    $table_name = self::meta_table_name();
+    $table_name = self::answers_table_name();
 
     if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
 
@@ -20,7 +20,7 @@ class Akka_headless_wp_polls_db {
       require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
       dbDelta( $sql );
 
-      add_option( 'pf_sso_version', PF_SSO_VER );
+      add_option( 'akka_polls_ver', AKKA_HEADLESS_WP_POLLS_VER );
     }
   }
 
@@ -33,7 +33,7 @@ class Akka_headless_wp_polls_db {
     global $wpdb;
   }
 
-  public static function answers_table_name($post_id, $user_id, $answer_id) {
+  public static function insert_answer($post_id, $user_id, $answer_id) {
     global $wpdb;
   }
 }
